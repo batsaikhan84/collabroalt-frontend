@@ -1,0 +1,17 @@
+header {
+    background: #222;
+    color: #fff;
+    padding: 20px 30px;
+}
+#logo {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    width: 49%;
+}
+#log img {
+    width: 50px;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: middle;
+}

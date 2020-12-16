@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript">
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            console.log(name)
+            if (name === "") {
+                alert("Please enter valid name")
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Example of HTML form</h1>
-    <form>
-        <p><label>Name: <input type="text" placeholder="Your name" required></label></p>
-        <p><label>Phone: <input type="text"></label></p>
-        <p><label>Email: <input type="email"></label></p>
-        <fieldset>
+    <form method="GET" onsubmit="return validateForm()">
+        <label>Name: <input id="name" type="text" placeholder="Your name"></label><br>
+        <label>Phone: <input type="text"></label><br>
+        <label>Email: <input type="email"></label><br>
+        <!-- <fieldset>
             <legend>Type of User</legend>
             <ul>
                 <li><input type="checkbox" name="" id=""><label for="">Admin User</label></li>
                 <li><input type="checkbox" name="" id=""><label for="">Database User</label></li>
                 <li><input type="checkbox" name="" id=""><label for="">Application User</label></li>
             </ul>
-        </fieldset>
-        <fieldset>
+        </fieldset> -->
+        <!-- <fieldset>
             <legend>Please choose your option</legend>
             <input type="radio" id="one" name="radioButton" value="one"/><label>Root Access One</label><br>
             <input type="radio" id="two" name="radioButton" value="two"/><label>Root Access Two</label><br>
@@ -40,7 +49,8 @@
         <p>
             <label for="">Special Instruction</label><br>
             <textarea name="" id="" cols="30" rows="10"></textarea>
-        </p>
+        </p> -->
+        <button type="submit" onsubmit="validateForm()">Submit</button>
     </form>
 </body>
 </html>

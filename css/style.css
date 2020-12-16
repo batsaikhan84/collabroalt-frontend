@@ -1,22 +1,203 @@
-header {
-    background: #222;
+* {
+    /* * all htm tags. */
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  
+  body {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Styling for header sections */
+  
+  header {
+    background: #151B2D;
     color: #fff;
     padding: 20px 30px;
-}
-#logo {
+  }
+  
+  /* Style for Logo */
+  #logo {
     display: inline-block;
     color: #fff;
     text-decoration: none;
     width: 49%;
-}
-#log img {
+  }
+  #logo img {
     width: 50px;
-    border-radius: 3px;
+    border-radius: 5px;
     margin-right: 8px;
     vertical-align: middle;
-}
-#logo span {
+  }
+  #logo span {
     display: inline-block;
     font-style: italic;
-    font-size: larger;
-}
+    font-size: x-large;
+  }
+  
+  /* Style for navigation  */
+  nav {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: 0.3s ease all;
+  }
+  
+  nav ul li a:hover {
+    background: lightcoral;
+  }
+  
+  /* Style for footer */
+  
+  footer {
+    background: #151B2D;
+    color: #777;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  footer img {
+    display: block;
+    border-radius: 5px;
+    width: 80px;
+    margin: 0 auto 10px;
+  }
+  
+  /* Style for hero div in main sections */
+  
+  .hero {
+    min-height: 800px;
+    text-align: center;
+    background-image: url("../img/sky.jpg");
+    background-size: cover;
+  }
+  
+  .hero-content{
+    color: #777;
+    padding-top: 130px;
+  }
+  
+  .hero-content h1{
+    font-size: 100px;
+    margin: 0;
+  }
+  
+  .hero-content p {
+    font-size: 50px;
+    margin: 0;
+  }
+  
+  .hero-content a {
+    display: inline-block;
+    color: #FFF;
+    border: 3px solid #FFF;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 28px;
+  }
+  
+  .hero-content a:hover{
+    background: lightcoral;
+  }
+  
+  /* Site sections */
+  
+  .site-selection {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  
+  .site-selection-inside{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .selection-header{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .selection-header h2{
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #777;
+  }
+  
+  .feature-box {
+    display: inline-block;
+    width: 33%;
+    padding: 20px 30px;
+  }
+  
+  .feature-box img{
+    margin-bottom: 12px;
+    width: 80px;
+  }
+  
+  .feature-box h5{
+    font-size: 16px;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  
+  
+  /* User reviews */
+  .testimonial-box {
+    display: inline-block;
+    width: 33%;
+    padding: 20x 30px;
+  }
+  
+  .testimonial-content{
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-author img{
+    float: left;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+    vertical-align: middle;
+  }
+  
+  .testimonial-author span{
+    font-size: 14px;
+  }
+  
+  .site-selection-secondary   {
+    background: #EFEFEF;
+  }

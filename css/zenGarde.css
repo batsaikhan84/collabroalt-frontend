@@ -16,7 +16,7 @@ h1 {
     color: blue;
     text-decoration: underline;
     text-shadow: 1px white;
-    transition: 0.3s ease all
+    transition: 0.7s ease all
 
 }
 h1:hover {

@@ -1,0 +1,50 @@
+* {
+    /* * all htm tags. */
+    box-sizing: border-box;
+    background-color: powderblue;
+  }
+.intro {
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+    text-shadow: 1px white;
+
+}
+.main-supporting {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+.explanation, .participation, .requirements, .benefits {
+    border: 1px solid black;
+    box-shadow: 10px 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.sidebar {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+ul li {
+    list-style: none;
+}
+footer {
+    text-align: center;
+}
+

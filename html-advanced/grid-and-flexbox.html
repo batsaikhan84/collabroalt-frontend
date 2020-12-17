@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Grid and Flexbox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+        }
+        #flexbox {
+            display: flex;
+            flex: 1;
+        }
+        #flexbox > article {
+            flex: 1;
+        }
+        #flexbox > nav, #flexbox > aside {
+            flex: 0 0 20vw;
+            background: beige;
+        }
+        #flexbox > nav {
+            order: -1
+        }
+        header, footer {
+            background: yellowgreen;
+            height: 3em;
+        }
+        header, footer, article, nav, aside {
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">About CSS grid and flexbox</h1>
+    </div>
+    <div>
+        <h3 style="text-align: center;">Demo of CSS Flexbox </h3>
+        <header>Header</header>
+        <div id="flexbox">
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, 
+                saepe debitis provident molestias eaque fuga quis optio natus voluptatibus. 
+                Soluta repellendus numquam amet nemo eveniet odit facilis! Facilis, obcaecati quam?
+            </article>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Produc</li>
+                    <li>Service</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+            <aside>For ad and Other Content</aside>
+        </div>
+        <footer>Footer</footer>
+    </div>
+    <div>
+        <h3 style="text-align: center;">Demo of CSS Grid</h3>
+        <style>
+            #grid {
+                display: grid;
+                grid-template-columns: "header header aside" "nav article article";
+                grid-template-rows: 80px, 1fr, 70px;
+                grid-template-columns: 20% 1fr, 15%;
+                grid-row-gap: 10px;
+                grid-column-gap: 10px;
+                height: 100vh;
+                margin: 0;
+            }
+            #pageHeader, #pageFooter, #mainArticle, #mainNav, #mainAside {
+                padding: 1.2em;
+                background: goldenrod;
+            }
+            #pageHeader {
+                grid-area: header;
+            }@media all and (max-width: 575px) {
+                #grid {
+                    grid-template-areas: "header" "article" "aside" "nav" "footer";
+                    grid-template-rows: 80px 1fr 70px 1fr 70pf;
+                    grid-column: 1fr;
+                }
+            }
+        </style>
+        <div id="grid">
+            <header id="pageHeader">This will be website's header</header>
+            <article id="mainArticle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Iusto dicta, blanditiis vel minus, magni voluptas cupiditate, 
+                accusantium neque laborum explicabo veniam pariatur aperiam minima. 
+                Tempora iste quam magni dolorum explicabo!
+            </article>
+            <nav id="mainNav">
+                <ul>
+                    <li>Hame</li>
+                    <li>Product</li>
+                    <li>Service</li>
+                </ul>
+            </nav>
+            <main>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>

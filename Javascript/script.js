@@ -1,16 +1,29 @@
 arr = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 let currentPlayer = 'x'
 
+
+// for (let i = 1; i <= arr.length; i++) {
+//     let box = document.getElementById('box' + i.toString())
+//     let p = document.createElement('p')
+//     p.id = 'box-value-color'
+//     p.innerHTML = arr[i-1]
+//     box.appendChild(p)
+// }
 function userClick(e) {
     e.preventDefault();
     let index = parseInt(e.target.id.slice(-1))
     if (isOccupied(index) === false) {
         arr[index - 1] = currentPlayer
         userRotation()
+        let box = document.getElementById('box' + (index).toString())
+        let p = document.createElement('p')
+        p.id = 'box-value-color'
+        p.innerHTML = arr[index-1]
+        box.appendChild(p)
+        
     } else {
         alert("Please choose different box")
     }
-    
     console.log(arr) 
 }
 function userRotation() {
@@ -28,22 +41,6 @@ function isOccupied(index) {
     }
 }
 document.onclick = userClick
-for (let i = 1; i <= arr.length; i++) {
-    let box = document.getElementById('box' + i.toString())
-    console.log(box)
-}
-
-
-
-// function test(e) {
-//     currentPlayer = 'x'
-//     e.preventDefault();
-//     const box1 = document.getElementById('box1')
-//     let p = document.createElement('p')
-//     p.id = 'box-value-color'
-//     p.innerHTML = arr[0]
-//     box1.appendChild(p)
-// }
 
 
 

@@ -5,59 +5,39 @@
 }
 h1 {
     font-size: 60px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: cadetblue;
 }
-.mainBox {
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#mainBox {
     display: grid;
     border: 1px solid rgb(238, 97, 15);
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
     background: rgb(95, 175, 207);
     height: 600px;
     width: 600px;
 }
-.box1 {
+.innerBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
     height: 200px;
     width: 200px;
     border: 1px solid rgb(238, 97, 15);
 }
-.box2 {
-    height: 200px;
-    width: 200px;
-    border: 1px solid rgb(238, 97, 15);
+#box-value-color {
+    font-size: 150px;
+    color: blue;
 }
-.box3 {
-    height: 200px;
-    width: 200px;
-    border: 1px solid rgb(238, 97, 15);
-}
-.box4 {
-    height: 200px;
-    width: 200px;
-    border: 1px solid rgb(238, 97, 15);
-}
-.box5 {
-    height: 200px;
-    width: 200px;
-    border: 1px solid rgb(238, 97, 15);
-}
-.box6 {
-    height: 200px;
-    width: 200px;
-    border: 1px solid rgb(238, 97, 15);
-}
-.box7 {
-    height: 200px;
-    width: 200px;
-    border: 1px solid rgb(238, 97, 15);
-}
-.box8 {
-    height: 200px;
-    width: 200px;
-    border: 1px solid rgb(238, 97, 15);
-}
-.box9 {
-    height: 200px;
-    width: 200px;
-    border: 1px solid rgb(238, 97, 15);
+p {
+    margin: 0;
+    padding: 0;
 }

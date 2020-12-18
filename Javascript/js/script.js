@@ -1,7 +1,11 @@
+window.addEventListener('load', (e) => {
+    console.log('page is fully loaded');
+  });
+
 arr = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 let currentPlayer = 'x'
 
-function userClick(e) {
+userClick = (e) => {
     e.preventDefault();
     let index = parseInt(e.target.id.slice(-1))
     if (isOccupied(index) === false) {

@@ -9,6 +9,10 @@ h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: cadetblue;
 }
+p {
+    margin: 0;
+    padding: 0;
+}
 #container {
     position: absolute;
     top: 50%;
@@ -37,7 +41,4 @@ h1 {
     font-size: 150px;
     color: blue;
 }
-p {
-    margin: 0;
-    padding: 0;
-}
+

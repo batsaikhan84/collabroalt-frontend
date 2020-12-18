@@ -1,14 +1,6 @@
 arr = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 let currentPlayer = 'x'
 
-
-// for (let i = 1; i <= arr.length; i++) {
-//     let box = document.getElementById('box' + i.toString())
-//     let p = document.createElement('p')
-//     p.id = 'box-value-color'
-//     p.innerHTML = arr[i-1]
-//     box.appendChild(p)
-// }
 function userClick(e) {
     e.preventDefault();
     let index = parseInt(e.target.id.slice(-1))

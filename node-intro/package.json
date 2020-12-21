@@ -4,7 +4,7 @@
   "description": "javascript promise api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "Batsaikhan Ulambayar",
   "license": "MIT",

@@ -1,12 +1,32 @@
-class User {
-    constructor(name) {
-        this.name = name
+// class Employee {
+//     constructor(name) {
+//         this.name = name
+//     }
+//     set name(value) {
+//         if (value.length < 4) {
+//             console.log("Employeee name is too short!")
+//             return;
+//         }
+//         this.employeeName = value
+//     }
+//     get name() {
+//         return this.employeeName
+//     }
+// }
+
+// let employeeOne = new Employee("Michael")
+// console.log(employeeOne.name)
+
+
+class Car {
+    constructor() {}
+    get model() {
+        return this.carModel
     }
-    sayHello = () => {
-        console.log(`Hello ${this.name}`)
+    set model(model) {
+        this.carModel = model
     }
 }
-
-let userOne = new User("Jon")
-console.log(userOne.name)
-userOne.sayHello()
+let carOne = new Car()
+carOne.carModel = "SUV"
+console.log(carOne.carModel)

@@ -1,3 +1,8 @@
-import { firstName, lastName } from './about-export-import';
+state = {letters: [], number: []}
 
-console.log(firstName)
+let copyLetters = ["a", "b", "c"]
+let copyNumbers = ["1", "2", "3"]
+
+
+
+console.log(...state, letters [])

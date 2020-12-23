@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basics-of-angular';
+  firstName: String = 'Jon'
+  lastName: String = 'Snow'
+  isActive: Boolean = true
+  age: number = 36
+  printInfo(): String {
+    return `This is ${this.firstName}`
+  }
 }

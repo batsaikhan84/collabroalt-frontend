@@ -6,6 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  count: number = 0
+  // constructor() {
+  //   this.count;
+  // }
+  increment() {
+    return this.count++
+  }
+  decrement() {
+    return this.count--
+  }
   title = 'basics-of-angular';
   firstName: String = 'Jon'
   lastName: String = 'Snow'

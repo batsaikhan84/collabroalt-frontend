@@ -8,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class AppNgmodelComponent implements OnInit {
 
   constructor() { }
-
+  value: String = "";
+  // writeText(value: String) {
+  //   this.value = value
+  // }
+  clearText() {
+    this.value = ""
+  }
   ngOnInit(): void {
   }
 

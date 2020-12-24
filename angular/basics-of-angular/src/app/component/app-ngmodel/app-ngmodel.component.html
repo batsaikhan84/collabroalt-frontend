@@ -11,4 +11,9 @@
         <li>Import ngMdoel in app.module.ts</li>
         <li>Use this into HTML file</li>
     </ol>
+    <h3>Demo of Two-Way binding using ngModel</h3>
+    <input #box (keyup)="0">
+    <p>you have entered: <strong>{{ box.value }}</strong></p>
+    <button (click)="clearText()">Clear</button>
+
 </div>

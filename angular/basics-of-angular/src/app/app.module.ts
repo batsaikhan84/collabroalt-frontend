@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppNgmodelComponent } from './component/app-ngmodel/app-ngmodel.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { EmployeeListComponent } from './component/component/employee-list/employee-list.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppNgmodelComponent
+    AppNgmodelComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,

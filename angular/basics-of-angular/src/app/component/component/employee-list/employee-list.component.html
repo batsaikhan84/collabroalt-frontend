@@ -1,3 +1,16 @@
-<p>employee-list works!</p>
-
+<div>
+    <h2>Demo of ngFor directive with Array as Table</h2>
+    <table>
+        <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>phone</th>
+            <th>active</th>
+        </thead>
+        <tbody>
+            <tr *ngFor='let emp of employeeList'></tr>
+            <td>{{ emp.id }}</td>
+        </tbody>
+    </table>
+</div>
 

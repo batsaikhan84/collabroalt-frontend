@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from "./Employee";
 
 @Component({
   selector: 'app-employee-list',
@@ -28,8 +29,6 @@ export class EmployeeListComponent implements OnInit {
       isActive: false
     }
   ]}
-
   ngOnInit(): void {
   }
-
 }

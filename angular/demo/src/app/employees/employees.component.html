@@ -1,0 +1,41 @@
+<div>
+    <h1>{{ title }}</h1>
+</div>
+<div>
+    <h2>ngFOr example</h2>
+    <table class="table table-striped">
+        <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>isActive</th>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let employee of employees'>
+                <td>{{ employee.id }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.email }}</td>
+                <td>{{ employee.isActive }}</td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
+<div>
+    <h2>ngIf example</h2>
+    <div *ngIf = "employees.length > 0">
+        <p>The number of employees is: {{ employees.length }}</p>
+        </div>
+    <div *ngIf = "employees.length == 0">
+        <p>No employee in the employee list</p>
+    </div>
+</div>
+<div>
+    <h2>ngSwitch example</h2>
+    <div *ngIf = "employees.length > 0">
+        <p>The number of employees is: {{ employees.length }}</p>
+        </div>
+    <div *ngIf = "employees.length == 0">
+        <p>No employee in the employee list</p>
+    </div>
+</div>

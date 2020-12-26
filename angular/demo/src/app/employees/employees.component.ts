@@ -10,11 +10,20 @@ export class EmployeesComponent implements OnInit {
   employees = [
     {id: 101, name: "Jon Snow", email: "snow@email.com", isActive: true},
     {id: 102, name: "Kim Uh", email: "uh@email.com", isActive: true},
-    {id: 103, name: "Sara Romo", email: "romo@email.com", isActive: true}
+    {id: 103, name: "Sara Romo", email: "romo@email.com", isActive: false}
   ]
   constructor() { }
 
   ngOnInit(): void {
+  }
+  toggleActive () {
+    this.employees.forEach(employee => {
+      if (employee.isActive === true) {
+        employee.isActive = false
+      } else if (employee.isActive === false) {
+        employee.isActive = true
+      }
+    });
   }
 
 }

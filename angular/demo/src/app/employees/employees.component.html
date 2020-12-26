@@ -17,7 +17,12 @@
                 <td>{{ employee.email }}</td>
                 <td>
                     <p>ngSwitch example</p>
-                    <button>{{ employee.isActive }}</button>
+                    <button (click) = "toggleActive()">
+                        <div [ngSwitch] = "employee.isActive">
+                            <div *ngSwitchCase = "true">Active</div>
+                            <div *ngSwitchCase = "false">Not Active</div>
+                        </div>
+                    </button>
                     
                 </td>
             </tr>
@@ -32,10 +37,5 @@
     </div>
     <div *ngIf = "employees.length == 0">
         <p>No employee in the employee list</p>
-    </div>
-</div>
-<div *ngFor = "let employee of employees">
-    <div [ngSwitch] = "employee.isActive">
-        <div *ngSwitchCase = "true">{{ employee.isActive }}</div>
     </div>
 </div>

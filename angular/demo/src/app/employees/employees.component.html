@@ -15,7 +15,11 @@
                 <td>{{ employee.id }}</td>
                 <td>{{ employee.name }}</td>
                 <td>{{ employee.email }}</td>
-                <td>{{ employee.isActive }}</td>
+                <td>
+                    <p>ngSwitch example</p>
+                    <button>{{ employee.isActive }}</button>
+                    
+                </td>
             </tr>
         </tbody>
         
@@ -25,17 +29,13 @@
     <h2>ngIf example</h2>
     <div *ngIf = "employees.length > 0">
         <p>The number of employees is: {{ employees.length }}</p>
-        </div>
+    </div>
     <div *ngIf = "employees.length == 0">
         <p>No employee in the employee list</p>
     </div>
 </div>
-<div>
-    <h2>ngSwitch example</h2>
-    <div *ngIf = "employees.length > 0">
-        <p>The number of employees is: {{ employees.length }}</p>
-        </div>
-    <div *ngIf = "employees.length == 0">
-        <p>No employee in the employee list</p>
+<div *ngFor = "let employee of employees">
+    <div [ngSwitch] = "employee.isActive">
+        <div *ngSwitchCase = "true">{{ employee.isActive }}</div>
     </div>
 </div>

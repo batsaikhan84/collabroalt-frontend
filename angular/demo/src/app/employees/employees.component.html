@@ -1,4 +1,4 @@
-<div [ngStyle] = "{'background-color':DodgerBlue}">
+<div [ngStyle] = "{'background-color':'DodgerBlue', 'text-align':'center'}">
     <h1 >{{ title }}</h1>
 </div>
 <div>
@@ -12,7 +12,7 @@
         </thead>
         <tbody>
             <tr *ngFor = 'let employee of employees'>
-                <td>{{ employee.id }}</td>
+                <td [ngStyle] = "{'background-color':'DodgerBlue'}">{{ employee.id }}</td>
                 <td>{{ employee.name }}</td>
                 <td>{{ employee.email }}</td>
                 <td>

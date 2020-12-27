@@ -16,14 +16,19 @@ export class EmployeesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  toggleActive () {
-    this.employees.forEach(employee => {
+  toggleActive (employee: any) {
       if (employee.isActive === true) {
         employee.isActive = false
       } else if (employee.isActive === false) {
         employee.isActive = true
       }
-    });
+  }
+  buttonClass(employee: any) {
+    if (employee.isActive === true) {
+      return 'active-button'
+    } else if (employee.isActive === false) {
+      return 'inActive-button'
+    }
   }
 
 }

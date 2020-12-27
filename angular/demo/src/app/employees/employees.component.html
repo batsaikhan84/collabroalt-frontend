@@ -1,5 +1,5 @@
-<div>
-    <h1>{{ title }}</h1>
+<div [ngStyle] = "{'background-color':DodgerBlue}">
+    <h1 >{{ title }}</h1>
 </div>
 <div>
     <h2>ngFOr example</h2>
@@ -17,17 +17,15 @@
                 <td>{{ employee.email }}</td>
                 <td>
                     <p>ngSwitch example</p>
-                    <button (click) = "toggleActive()">
+                    <button class = "" (click) = "toggleActive(employee)" [ngClass] = "buttonClass(employee)">
                         <div [ngSwitch] = "employee.isActive">
-                            <div *ngSwitchCase = "true">Active</div>
+                            <div *ngSwitchCase = "true" >Active</div>
                             <div *ngSwitchCase = "false">Not Active</div>
                         </div>
                     </button>
-                    
                 </td>
             </tr>
-        </tbody>
-        
+        </tbody>      
     </table>
 </div>
 <div>

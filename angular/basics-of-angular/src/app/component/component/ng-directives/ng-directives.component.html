@@ -9,8 +9,8 @@
     </ul>
 </div>
 <div>
-    <h4>Demp of *ngFor</h4>
-    <ul *ngFor = "let person of people; let i = index">
+    <h4 class="h1">Demp of *ngFor</h4>
+    <ul  *ngFor = "let person of people; let i = index">
         <li *ngIf = "person.age > 33">{{ i + 1 }} {{ person.name}} {{ person.age }}</li>
     </ul>
     <h4>Demp of *ngFor by Country</h4>

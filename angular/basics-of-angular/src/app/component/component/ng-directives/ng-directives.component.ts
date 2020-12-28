@@ -10,11 +10,11 @@ export class NgDirectivesComponent implements OnInit {
   peopleByCountry: any[]
   constructor() { 
     this.people = [
-      { name: "Douglas Pacee"},
-      { name: "Mark Miller"},
-      { name: "Day Meyers"},
-      { name: "Auirre Ellis"},
-      { name: "Tim Coook"}
+      { name: "Douglas Pacee", age: 23},
+      { name: "Mark Miller", age: 33},
+      { name: "Day Meyers", age: 38},
+      { name: "Auirre Ellis", age: 65},
+      { name: "Tim Coook", age: 65}
     ]
     this.peopleByCountry = [
       { country: 'US', people: [ { name: "Douglas Pacee"}, { name: "Day Meyers"} ] },

@@ -13,4 +13,11 @@
     <ul *ngFor = "let person of people; let i = index">
         <li>{{ i + 1 }} {{ person.name}} </li>
     </ul>
+    <h4>Demp of *ngFor by Country</h4>
+    <ul *ngFor = "let country of peopleByCountry">
+        <li>{{ country.country}} </li>
+        <ul *ngFor = "let person of country.people">
+            <li>{{ person.name }}</li>
+        </ul>
+    </ul>
 </div>

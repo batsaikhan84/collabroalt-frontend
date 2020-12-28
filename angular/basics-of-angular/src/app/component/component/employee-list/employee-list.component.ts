@@ -7,7 +7,7 @@ import { Employee } from "./Employee";
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-  employeeList: Employee[] = []
+  employeeList: Array<Employee>
   constructor() {   
     this.employeeList = [
     {

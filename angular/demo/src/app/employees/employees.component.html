@@ -4,9 +4,10 @@
 <div>
     <h2>ngFOr example</h2>
     <table class="table table-striped">
-        <thead [ngStyle] = "{'background-color':'DodgerBlue'}">
+        <thead [ngStyle] = "{'background-color':'DodgerBlue','font-size':'25px'}">
             <th>ID</th>
-            <th>Name</th>
+            <th>First Name</th>
+            <th>Last Name</th>
             <th>Email</th>
             <th>Department</th>
             <th>Hire Date</th>
@@ -16,11 +17,12 @@
         <tbody>
             <tr *ngFor = 'let employee of employees'>
                 <td>{{ employee.id }}</td>
-                <td>{{ employee.name | uppercase }}</td>
+                <td>{{ employee.name | nameSplit:'firstName' |uppercase }}</td>
+                <td>{{ employee.name | nameSplit:'lastName'| uppercase }}</td>
                 <td>{{ employee.email }}</td>
                 <td>{{ employee.department }}</td>
                 <td>{{ employee.hireDate | date: 'fullDate' | uppercase}}</td>
-                <td>{{ employee.annualSalary }}</td>
+                <td>{{ employee.annualSalary | currency:'USD':true:'1.2-2'}}</td>
             <td>
                     <button class = "" (click) = "toggleActive(employee)" [ngClass] = "buttonClass(employee)">
                         <div [ngSwitch] = "employee.isActive">

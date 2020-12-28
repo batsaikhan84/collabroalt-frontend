@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { NameFinderDirective } from './custom-directives/name-finder.directive';
+import { NameSplitPipe } from './customp-pips/name-split.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
-    NameFinderDirective
+    NameFinderDirective,
+    NameSplitPipe
   ],
   imports: [
     BrowserModule,

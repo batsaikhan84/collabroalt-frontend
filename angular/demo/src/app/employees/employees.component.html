@@ -4,19 +4,24 @@
 <div>
     <h2>ngFOr example</h2>
     <table class="table table-striped">
-        <thead>
-            <th>id</th>
-            <th>name</th>
-            <th>email</th>
-            <th>isActive</th>
+        <thead [ngStyle] = "{'background-color':'DodgerBlue'}">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Hire Date</th>
+            <th>Annual Salary</th>
+            <th>Active</th>
         </thead>
         <tbody>
             <tr *ngFor = 'let employee of employees'>
-                <td [ngStyle] = "{'background-color':'DodgerBlue'}">{{ employee.id }}</td>
-                <td>{{ employee.name }}</td>
+                <td>{{ employee.id }}</td>
+                <td>{{ employee.name | uppercase }}</td>
                 <td>{{ employee.email }}</td>
-                <td>
-                    <p>ngSwitch example</p>
+                <td>{{ employee.department }}</td>
+                <td>{{ employee.hireDate | date: 'fullDate' | uppercase}}</td>
+                <td>{{ employee.annualSalary }}</td>
+            <td>
                     <button class = "" (click) = "toggleActive(employee)" [ngClass] = "buttonClass(employee)">
                         <div [ngSwitch] = "employee.isActive">
                             <div *ngSwitchCase = "true" >Active</div>

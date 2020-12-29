@@ -6,18 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  newPassword = ""
   numberCheckBox = true;
   lowerCaseCheckBox = true
   upperCaseChckeBox = true
   symbolCheckBox = true
-  generatePassword(passwordObject: any): string {
+  generatePassword(passwordObject: any): void {
     let passwordLength = Number(passwordObject.passwordLength)
     let passwordHasNumber = Boolean(passwordObject.numberCheckBox)
     let passwordHasLowerCase = Boolean(passwordObject.lowerCaseCheckBox)
     let passwordHasUpperCase = Boolean(passwordObject.upperCaseChckeBox)
     let passwordHasSymbol = Boolean(passwordObject.symbolCheckBox)
-    console.log(passwordHasSymbol);
-    let newPassword = ""
     const lowerCase = "abcdefghijklmnopqrstuvwxyz"
     const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     const num = '0123456789'
@@ -25,40 +24,38 @@ export class AppComponent {
     let i = 1
     while (i < passwordLength) {
       if (this.passwordLengthValidation(passwordLength)) {
-        if ((newPassword.length < passwordLength)) {
+        if ((this.newPassword.length < passwordLength)) {
           if (passwordHasNumber) {
-            newPassword = newPassword.concat(this.randomIndexGenerator(num))
+            this.newPassword = this.newPassword.concat(this.randomIndexGenerator(num))
           }
         } else {
           break
         }
-        if ((newPassword.length < passwordLength)) {
+        if ((this.newPassword.length < passwordLength)) {
           if (passwordHasLowerCase) {
-            newPassword = newPassword.concat(this.randomIndexGenerator(lowerCase))
+            this.newPassword = this.newPassword.concat(this.randomIndexGenerator(lowerCase))
           }
         } else {
           break
         }
-        if ((newPassword.length < passwordLength)) {
+        if ((this.newPassword.length < passwordLength)) {
           if (passwordHasUpperCase) {
-            newPassword = newPassword.concat(this.randomIndexGenerator(upperCase))
+            this.newPassword = this.newPassword.concat(this.randomIndexGenerator(upperCase))
           }
         } else {
           break
         }
-        if ((newPassword.length < passwordLength)) {
+        if ((this.newPassword.length < passwordLength)) {
           if (passwordHasSymbol) {
-            newPassword = newPassword.concat(this.randomIndexGenerator(punctuation))
+            this.newPassword = this.newPassword.concat(this.randomIndexGenerator(punctuation))
           }
         } else {
           break
         }
       } else {
-        return "Please enter number between 8 and 32"
+        console.log("Please enter number between 8 and 32")
       }
     }
-    console.log(newPassword)
-    return newPassword
   }
   randomIndexGenerator(str: string): string {
     return str[Math.floor(Math.random() * str.length)]

@@ -9,27 +9,25 @@
           <button class="btn btn-primary" type="submit" id="inputGroupFileAddon04">Submit</button>
           <div>
             <div class="mb-3 form-check form-check-inline">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1" name="lowerCaseCheckBox" ngModel checked>
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" name="lowerCaseCheckBox" [(ngModel)] = 'lowerCaseCheckBox' checked>
               <label class="form-check-label" for="exampleCheck1">Lower Case</label>
             </div>
             <div class="mb-3 form-check form-check-inline">
-              <input type="checkbox" class="form-check-input" id="exampleCheck2" name="upperCaseChckeBox" ngModel checked>
+              <input type="checkbox" class="form-check-input" id="exampleCheck2" name="upperCaseChckeBox" [(ngModel)] = 'upperCaseChckeBox' checked>
               <label class="form-check-label" for="exampleCheck1">Upper Case</label>
             </div>
             <div class="mb-3 form-check form-check-inline">
-              <input type="checkbox" class="form-check-input" id="exampleCheck3" name="symbolCheckBox" ngModel checked>
+              <input type="checkbox" class="form-check-input" id="exampleCheck3" name="symbolCheckBox" [(ngModel)] = 'symbolCheckBox' checked>
               <label class="form-check-label" for="exampleCheck1">Symbol</label>
             </div>
             <div class="mb-3 form-check form-check-inline">
-              <input type="checkbox" class="form-check-input" id="exampleCheck4" name="numberCheckBox" ngModel checked>
+              <input type="checkbox" class="form-check-input" id="exampleCheck4" name="numberCheckBox" [(ngModel)] = 'numberCheckBox' checked>
               <label class="form-check-label" for="exampleCheck1">Number</label>
             </div>
           </div>
         </div>
         <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Your Password</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          <!-- <button class="btn btn-primary" type="button" id="inputGroupFileAddon04">Copy</button> -->
+          <h3>Your Password:  {{ newPassword }}</h3>
         </div>
       </form>
     </div>

@@ -1,12 +1,39 @@
 <div class="container">
-  <h3 class="display-3 text-center">Password Generator App</h3>
-</div>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Password Generator</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+  <div class="card" style="width: 35rem;">
+    <div class="card-body">
+      <h5 class="card-title">Password Generator</h5>
+      <form>
+        <div class="input-group">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Please Select you password length</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+          </select>
+          <button class="btn btn-primary" type="button" id="inputGroupFileAddon04">Submit</button>
+        </div>
+        <div>
+          <div class="mb-3 form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Letter</label>
+          </div>
+          <div class="mb-3 form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Number</label>
+          </div>
+          <div class="mb-3 form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Symbol</label>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Your Password</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <button class="btn btn-primary" type="button" id="inputGroupFileAddon04">Copy</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-password-generator',
+  templateUrl: './password-generator.component.html',
+  styleUrls: ['./password-generator.component.css']
 })
-export class AppComponent {
+export class PasswordGeneratorComponent implements OnInit {
   newPassword = ""
   numberCheckBox = true
   lowerCaseCheckBox = true
@@ -67,4 +67,9 @@ export class AppComponent {
       return false
     }
   }
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }

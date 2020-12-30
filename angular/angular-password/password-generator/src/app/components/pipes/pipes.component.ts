@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PipesComponent implements OnInit {
   title: String = "Intro to Pipes"
   dateValue = new Date()
+  jsonValue = { name: 'Json Object', type: 'It is Json object'}
 
   constructor() { }
 

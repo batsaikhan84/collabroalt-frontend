@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { TemperatureConversionPipe } from './components/customPipe/temperature-conversion.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaginationComponent,
-    PipesComponent
+    PipesComponent,
+    TemperatureConversionPipe
   ],
   imports: [
     BrowserModule,

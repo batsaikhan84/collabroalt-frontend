@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaginationComponent
+    PaginationComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,

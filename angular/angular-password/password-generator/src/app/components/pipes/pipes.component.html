@@ -17,6 +17,26 @@
             <p>{{ 3.147887 | number: '1.4-4'}}</p>
             <h4 class="card-title">Json Pipe</h4>
             <p>{{ jsonValue | json }}</p>
+            <div class="col-sm">
+              <h2 class="display-6">Custom Pipe</h2>
+              <div class="card">
+                <div class="card-header" style="background: lightcoral;">
+                  <p>{{ title }}</p>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <h4>Fahreinheit to Celsius</h4>
+                  </div>
+                  <div class="row">
+                    <h4>Fahreinheit: </h4>
+                      <input type="number" [(ngModel)]="fahrenheit">
+                      Fahrenheit: {{ celsius |  temperatureConversion: 'C' }}
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
         </div>
       </div>
       <div class="col-sm">

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TemperatureConversionPipe } from './components/customPipe/temperature-conversion.pipe';
+import { PrefixPipe } from './components/customPipe/prefixPipe/prefix.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaginationComponent,
     PipesComponent,
-    TemperatureConversionPipe
+    TemperatureConversionPipe,
+    PrefixPipe
   ],
   imports: [
     BrowserModule,

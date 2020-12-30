@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class NameSplitPipe implements PipeTransform {
 
   transform(value: string, givenName: string): string {
-    if(givenName == 'firstName') {
+    if (givenName == 'firstName') {
       return value.split(" ")[0]
     } else if (givenName == 'lastName'){
       return value.split(" ")[1]

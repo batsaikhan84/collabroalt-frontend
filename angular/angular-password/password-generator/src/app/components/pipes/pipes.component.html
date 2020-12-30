@@ -2,7 +2,12 @@
     <h2 class="display-6 text-center">Introduction of Pipes</h2>
     <div class="row">
       <div class="col-sm">
-        One of three columns
+        {{ 2300.99 | currency:'USD' }}
+        <div class="card card-block">
+            <h4 class="card-title">Currency Pipes with Non-bindable</h4>
+            <p ngNonBindable>{{ 2300.78 | currency: 'USA' }}</p>
+            <p>{{ 2300.78 | currency: 'USA' }}</p>
+        </div>
       </div>
       <div class="col-sm">
         One of three columns

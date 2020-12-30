@@ -7,6 +7,16 @@
             <h4 class="card-title">Currency Pipes with Non-bindable</h4>
             <p ngNonBindable>{{ 2300.78 | currency: 'USA' }}</p>
             <p>{{ 2300.78 | currency: 'USA' }}</p>
+            <h4 class="card-title">Date Pipes</h4>
+            <p>{{ dateValue }}</p>
+            <p>{{ dateValue | date: 'short' }}</p>
+            <p>{{ dateValue | date: 'fullDate' }}</p>
+            <p>{{ dateValue | date: 'M/d/y' }}</p>
+            <h4 class="card-title">Decimal Pipes</h4>
+            <p>{{ 3.147887 | number: '3.1-2'}}</p>
+            <p>{{ 3.147887 | number: '1.4-4'}}</p>
+            <h4 class="card-title">Json Pipe</h4>
+            <p></p>
         </div>
       </div>
       <div class="col-sm">

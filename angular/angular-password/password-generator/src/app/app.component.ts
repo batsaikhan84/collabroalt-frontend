@@ -22,6 +22,7 @@ export class AppComponent {
     const num = '0123456789'
     const punctuation = '!@#$%&*()_|}{[]\?></-='
     let i = 1
+    this.newPassword = ""
     while (i < passwordLength) {
       if (this.passwordLengthValidation(passwordLength)) {
         if ((this.newPassword.length < passwordLength)) {

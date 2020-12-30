@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgForm} from '@angular/forms'
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,12 +11,13 @@ import { PasswordGeneratorComponent } from './password-generator/password-genera
 
 @NgModule({
   declarations: [
+    FormsModule,
     AppComponent,
     EmployeesComponent,
     NameFinderDirective,
     NameSplitPipe,
-    PasswordGeneratorComponent,
-    NgForm
+    PasswordGeneratorComponent
+    
   ],
   imports: [
     BrowserModule,

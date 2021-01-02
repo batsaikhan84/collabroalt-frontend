@@ -10,7 +10,8 @@ import { map } from 'rxjs/operators'
 })
 export class RandomPicturesComponent implements OnInit {
   url: string = "https://api.unsplash.com/search/photos?query=chicago&client_id=kan8c_FKJC4jtnlAy7zWSD_HtfwxjmwaHPi56Xpv1PU"
-  picturesList = []
+  loadedPictures = []
+  isLoading = false
 
   constructor(private http: HttpClient) {
   }
@@ -21,8 +22,13 @@ export class RandomPicturesComponent implements OnInit {
     this.fetchPictures()
   }
   private fetchPictures() {
+    this.isLoading = true
     this.http.get(this.url).
-    pipe(map(responseData => console.log(responseData.results)))
-      .subscribe()
+    pipe(map(responseData => {
+      for (const key in responseData) {
+        if
+      }
+    }))
+      .subscribe(this.isLoading = false;)
   }
 }

@@ -1,10 +1,15 @@
 <div class="card  d-flex align-items-center justify-content-center" style="width: 60rem; height: 30em;">
     <div class="container-pictures d-flex align-items-center justify-content-center" style="width: 60rem; height: 25em;">
-        <img class="card-img-top" style="width: 20rem; height: 20rem;" src="" alt="...">
-        <img class="card-img-top" style="width: 20rem; height: 20rem;" src="" alt="...">
-        <img class="card-img-top" style="width: 20rem; height: 20rem;" src="" alt="...">
+        <ul class="list-group list-unstyled" style="display: inline" *ngFor = "let picture of loadedRandomPictures">
+            <li class="list-inline-item" style="border: 1px solid white;"><img class="card-img-top" style="width: 18rem; height: 18rem;" [src]="picture" alt="..."></li>
+        </ul>
     </div>
     <div class="card-body">
-        <button type="button" class="btn btn-dark">Shuffle</button>
+        <form class = 'd-flex align-items-center justify-content-center'>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="inputPassword2" placeholder="Enter your value" (input)="getFormInput($event)">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2" (click) = "onFetchPictures()">Search</button>
+        </form>
     </div>
   </div>

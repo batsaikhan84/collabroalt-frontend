@@ -13,7 +13,6 @@ export class TimerComponent implements OnInit, OnDestroy {
   constructor() { 
   }
   ngOnInit(): void {
-    console.log(this.isTimerOn)
   }
   incrementCount() {
       this.count++

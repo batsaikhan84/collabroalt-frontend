@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable, Observer } from 'rxjs';
 import { map } from 'rxjs/operators'
 
 
@@ -9,26 +10,42 @@ import { map } from 'rxjs/operators'
   styleUrls: ['./random-pictures.component.css']
 })
 export class RandomPicturesComponent implements OnInit {
-  url: string = "https://api.unsplash.com/search/photos?query=chicago&client_id=kan8c_FKJC4jtnlAy7zWSD_HtfwxjmwaHPi56Xpv1PU"
-  loadedPictures = []
+  queryValue: string = "chicago"
+  url: string = `https://api.unsplash.com/search/photos?query=${this.queryValue}&client_id=kan8c_FKJC4jtnlAy7zWSD_HtfwxjmwaHPi56Xpv1PU`
+  loadedRandomPictures: any[] = []
   isLoading = false
-
   constructor(private http: HttpClient) {
   }
   ngOnInit(): void {
-    this.fetchPictures()
+    const customObservable = new Observable(observer => {
+      let count = 0
+      setInterval(() => {
+        observer.next(count)
+        count++
+      }, 1000)
+    })
+  }
+  getFormInput($event: any): any {
+    this.queryValue = $event.target.value
   }
   onFetchPictures() {
     this.fetchPictures()
   }
   private fetchPictures() {
     this.isLoading = true
-    this.http.get(this.url).
-    pipe(map(responseData => {
-      for (const key in responseData) {
-        if
+    this.http.get<any>(this.url)
+    .pipe(map(response => {
+      const responseArr = []
+      let i = 0
+      while (i < 3) {
+        responseArr.push(response.results[Math.floor(Math.random() * (response.results.length))].urls.raw)
+        i++
       }
+      return responseArr
     }))
-      .subscribe(this.isLoading = false;)
+    .subscribe(data => {
+      this.isLoading = false;
+      this.loadedRandomPictures = data;
+    })
   }
 }

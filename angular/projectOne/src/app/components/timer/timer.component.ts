@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-timer',

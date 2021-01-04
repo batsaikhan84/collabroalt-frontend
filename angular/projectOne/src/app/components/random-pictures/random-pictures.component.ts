@@ -16,14 +16,16 @@ export class RandomPicturesComponent implements OnInit {
   isLoading = false
   constructor(private http: HttpClient) {
   }
+  customObservable = new Observable(observer => {
+    let count = 0
+    setInterval(() => {
+      observer.next(count)
+      count++
+    }, 1000)
+  })
   ngOnInit(): void {
-    const customObservable = new Observable(observer => {
-      let count = 0
-      setInterval(() => {
-        observer.next(count)
-        count++
-      }, 1000)
-    })
+    // this.customObservable.subscribe((observer) => console.log(observer))
+    this.fetchPictures()
   }
   getFormInput($event: any): any {
     this.queryValue = $event.target.value

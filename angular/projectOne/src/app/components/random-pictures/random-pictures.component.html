@@ -1,7 +1,8 @@
 <div class="card  d-flex align-items-center justify-content-center" style="width: 60rem; height: 30em;">
     <div class="container-pictures d-flex align-items-center justify-content-center" style="width: 60rem; height: 25em;">
-        <ul class="list-group list-unstyled" style="display: inline" *ngFor = "let picture of loadedRandomPictures">
-            <li class="list-inline-item" style="border: 1px solid white;"><img class="card-img-top" style="width: 18rem; height: 18rem;" [src]="picture" alt="..."></li>
+        <ul class="list-group list-unstyled" style="display: inline;" *ngFor = "let picture of loadedRandomPictures">
+            <li class="list-inline-item" style="border: 1px solid white;" *ngIf = "!isLoading"><img class="card-img-top" style="width: 18rem; height: 18rem;" [src]="picture" alt="..."></li>
+            <li class="list-inline-item" style="border: 1px solid white;" *ngIf = "isLoading"><h1>Loading...</h1></li>
         </ul>
     </div>
     <div class="card-body">

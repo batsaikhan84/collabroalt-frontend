@@ -25,7 +25,7 @@ export class TimerComponent implements OnInit, OnDestroy {
   }
   startTimer() {
     if (!this.isTimerOn) {
-      this.timerSubscription = interval(1000).subscribe( () => this.incrementCount())
+      this.timerSubscription = interval(1000).subscribe(() => this.incrementCount())
       this.isTimerOn = true
     }
   }

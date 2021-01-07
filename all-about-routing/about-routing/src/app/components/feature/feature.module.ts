@@ -4,8 +4,10 @@ import { CommonModule } from '@angular/common';
 
 import { FeatureRoutingModule } from './feature-routing.module';
 
+import { PricingComponent } from './pricing/pricing.component';
+
 @NgModule({
-  declarations: [],
+  declarations: [PricingComponent, FeatureComponent],
   imports: [
     CommonModule,
     FeatureRoutingModule

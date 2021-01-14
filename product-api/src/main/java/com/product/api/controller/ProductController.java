@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class ProductController {
@@ -37,6 +39,13 @@ public class ProductController {
         product.setShipping(productDetails.getShipping());
         final Product updateTeam = productRepository.save(product);
         return ResponseEntity.ok(updateTeam);
-
+    }
+    @DeleteMapping("/products/{id}")
+    public Map<String, Boolean> deleteProduct(@PathVariable(value = "id") long id) throws RecordNotFound {
+        Product product = productRepository.findById(id).orElseThrow(() -> new RecordNotFound("Product not found by ID: " + id));
+        productRepository.delete(product);
+        Map<String, Boolean> deleteProduct = new HashMap<>();
+        deleteProduct.put("deleted id: " + id, Boolean.TRUE);
+        return deleteProduct;
     }
 }

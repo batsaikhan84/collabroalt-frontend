@@ -1,1 +1,11 @@
-<p>products works!</p>
+<div class="container">
+    <div class="card-group m-4" >
+        <div class="card" style="width: 18rem;"  *ngFor="let product of products"  >
+            <img class="card-img-top img-fluid"  src="{{product.imageLink}}" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <a routerLink = "/product" class="btn btn-primary">See details</a>
+            </div>
+        </div>
+    </div>
+</div>

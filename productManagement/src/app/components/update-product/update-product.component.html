@@ -1,1 +1,25 @@
-<p>update-product works!</p>
+<div class="container">
+    <form #productForm = "ngForm" (ngSubmit) = "onUpdateProduct(productForm.value)">
+        <div class="mb-3">
+            <input class="form-control" type="text" placeholder="title" ngModel name="title">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" type="text" placeholder="description" ngModel name="description">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" type="text" placeholder="imageLink" ngModel name="imageLink">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" type="number" placeholder="availibility" ngModel name="availability">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" type="text" placeholder="shipping" ngModel name="shipping">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" type="number" placeholder="price" ngModel name="price">
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button> 
+        <button routerLink = "/products" type="submit" class="btn btn-primary" style="margin-left: 10px;">Back</button>
+    </form>
+    
+</div>

@@ -18,11 +18,10 @@ export class CreateProductComponent implements OnInit {
     this.router.navigate(['products'])
   }
   onCreateProduct(product: Product) {
-
     this.productService.createProduct(product).subscribe(response => {
-      
       this.backToProducts();
-
     }, error => console.error(error));
   }
 }
+
+

@@ -22,8 +22,8 @@ export class UpdateProductComponent implements OnInit {
   backToProduct() {
     this.router.navigate(['product', this.id])
   }
-  onUpdateProduct(id: number, updatedProduct: Product) {
-    this.productService.updateProduct(id, updatedProduct).subscribe(response => {
+  onUpdateProduct(updatedProduct: Product) {
+    this.productService.updateProduct(this.id, this.product).subscribe(response => {
       this.product = response
       this.backToProduct()
     })

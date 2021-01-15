@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Product } from '../../models/product.model'
@@ -14,8 +15,8 @@ export class ProductsService {
   fetchProducts() {
     return this.http.get<Product[]>(this.url)
   }
-  fetchProduct(id: number) {
-    return this.http.get<Product>(`${this.url}/${id}`)
+  fetchProduct(id: number): Observable<any> {
+    return this.http.get(`${this.url}/${id}`)
   }
   createProduct(product: Object) {
     return this.http.post<Product>(this.url, product)

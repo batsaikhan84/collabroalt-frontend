@@ -1,1 +1,12 @@
-<p>product works!</p>
+<div class="card" style="width: 18rem;" *ngIf = "product">
+    <div class="card-body">
+      <h5 class="card-title">{{ product.title }}</h5>
+      <p class="card-text">Description: {{ product.description }}</p>
+      <p class="card-text">Price: {{ product.price }}</p>
+      <p class="card-text">Availalbe: {{ product.availability }}</p>
+      <p class="card-text">Shipping: {{ product.shipping }}</p>
+      <button routerLink = "/products" class="btn btn-primary">Back</button>
+      <button routerLink = "/products" class="btn btn-primary" style="margin-left: 10px;">Update</button>
+      <button (click) = "onDeleteProduct(product.id)" class="btn btn-primary" style="margin-left: 10px;">Delete</button>
+    </div>
+  </div>

@@ -20,9 +20,8 @@ export class ProductsComponent implements OnInit {
   loadProducts() {
     this.productService.fetchProducts().subscribe(response => { this.products = response } )
   }
-  onDeleteProduct(id: number) {
-    this.productService.deleteProduct(id).subscribe(response => console.log(response))
+  onProduct(id: number) {
+    this.router.navigate(['product', id])
   }
-
 
 }

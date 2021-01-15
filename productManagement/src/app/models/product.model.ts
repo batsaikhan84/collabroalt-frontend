@@ -6,4 +6,6 @@ export interface Product {
     shipping: string;
     price: number;
     availability: number;
+    created_at: String;
+    updated_at: String;
 }

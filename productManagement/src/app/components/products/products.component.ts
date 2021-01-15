@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
     this.loadProducts()
   }
   loadProducts() {
-    this.productService.fetchProducts().subscribe(response => { this.products = response; console.log(response) } )
+    this.productService.fetchProducts().subscribe(response => { this.products = response;} )
   }
   onProduct(id: number) {
     this.router.navigate(['product', id])

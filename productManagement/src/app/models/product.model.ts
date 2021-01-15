@@ -1,9 +1,9 @@
 export interface Product {
     id: number;
-    title: String;
-    description: String;
-    imageLink: String;
-    shipping: String;
+    title: string;
+    description: string;
+    imageLink: string;
+    shipping: string;
     price: number;
-    availability: string;
+    availability: number;
 }

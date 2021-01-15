@@ -18,8 +18,9 @@ export class ProductsService {
   fetchProduct(id: number): Observable<any> {
     return this.http.get(`${this.url}/${id}`)
   }
-  createProduct(product: Object) {
-    return this.http.post<Product>(this.url, product)
+  createProduct(product: Product) {
+    console.log(product)
+    return this.http.post(this.url, product)
   }
   updateProduct(id: number, product: Object) {
     return this.http.put<Product>(`${this.url}/${id}`, product)

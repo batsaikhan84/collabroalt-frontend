@@ -10,11 +10,17 @@ import { Product } from 'src/app/models/product.model';
 })
 export class CreateProductComponent implements OnInit {
 
-  constructor(private productService: ProductsService, private router: Router, activatedRoute: ActivatedRoute) { }
+  constructor(private productService: ProductsService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
-  onUpdateProduct(id: number, product: Product) {
-    
+  backToProducts() {
+    this.router.navigate(['products'])
+  }
+  onCreateProduct(product: Product) {
+    this.productService.createProduct(product).subscribe(response => {
+        console.log(response);
+        this.backToProducts();
+    });
   }
 }

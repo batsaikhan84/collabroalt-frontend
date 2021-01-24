@@ -10,8 +10,8 @@ import { Product } from 'src/app/models/product.model';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  id!: number;
-  product!: Product;
+  id: number;
+  product: Product;
   constructor(private productService: ProductsService, private router: Router, private route: ActivatedRoute) { }
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id']
@@ -19,6 +19,9 @@ export class ProductComponent implements OnInit {
   }
   backToProducts() {
     this.router.navigate(['products'])
+  }
+  goToUpdate(id: number) {
+    this.router.navigate(['update', id])
   }
   onDeleteProduct(id: number) {
     this.productService.deleteProduct(id).subscribe(response => {

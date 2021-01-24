@@ -9,23 +9,22 @@ import { ProductsService } from 'src/app/services/product-service/products.servi
   styleUrls: ['./update-product.component.css']
 })
 export class UpdateProductComponent implements OnInit {
-  id!: number
-  product!: Product
-  submitted!: false;
+  id: number
+  product: Product
 
   constructor(private productService: ProductsService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id']
-    this.productService.fetchProduct(this.id).subscribe(response => this.product = response)
+    this.productService.fetchProduct(this.id).subscribe(response => this.product = response )
   }
   backToProduct() {
     this.router.navigate(['product', this.id])
   }
-  onUpdateProduct(updatedProduct: Product) {
+  onUpdateProduct() {
     this.productService.updateProduct(this.id, this.product).subscribe(response => {
-      this.product = response
-      this.backToProduct()
+      response;
+      this.backToProduct();
     })
   }
 }

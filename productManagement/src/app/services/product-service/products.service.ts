@@ -22,8 +22,8 @@ export class ProductsService {
     console.log(product)
     return this.http.post(this.url, product)
   }
-  updateProduct(id: number, product: Object) {
-    return this.http.put<Product>(`${this.url}/${id}`, product)
+  updateProduct(id: number, product: Product) {
+    return this.http.put(`${this.url}/${id}`, product)
   }
   deleteProduct(id: number) {
     return this.http.delete(`${this.url}/${id}`)

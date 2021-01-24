@@ -1,7 +1,7 @@
 <div class="container">
-    <form #productForm = "ngForm" (ngSubmit) = "onUpdateProduct(productForm.value)">
+    <form #productForm = "ngForm" (ngSubmit) = "onUpdateProduct()">
         <div class="mb-3">
-            <input class="form-control" type="text" placeholder="title" ngModel name="title">
+            <input class="form-control" type="text" placeholder="title" required [(ngModel)] = "product.title" name="title">
         </div>
         <div class="mb-3">
             <input class="form-control" type="text" placeholder="description" ngModel name="description">
@@ -19,7 +19,6 @@
             <input class="form-control" type="number" placeholder="price" ngModel name="price">
         </div>
         <button type="submit" class="btn btn-primary">Update</button> 
-        <button routerLink = "/products" type="submit" class="btn btn-primary" style="margin-left: 10px;">Back</button>
+        <button (click)="backToProduct()" type="submit" class="btn btn-primary" style="margin-left: 10px;">Back</button>
     </form>
-    
 </div>
